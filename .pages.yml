@@ -1,0 +1,74 @@
+# DriveHub TR mod yönetim paneli - Pages CMS
+media:
+  input: media
+  output: /media
+  rename: safe
+content:
+  - name: modlar
+    label: Mod Yönetimi
+    type: collection
+    path: content/mods
+    format: json
+    filename: "{primary}.json"
+    view:
+      fields: [baslik, oyun, kategori, surum, tarih]
+      primary: baslik
+      sort: [tarih, baslik]
+      default:
+        sort: tarih
+        order: desc
+    fields:
+      - name: baslik
+        label: Mod adı
+        type: string
+        required: true
+      - name: oyun
+        label: Oyun
+        type: select
+        required: true
+        options:
+          values:
+            - name: ETS2
+              label: Euro Truck Simulator 2
+            - name: ATS
+              label: American Truck Simulator
+      - name: kategori
+        label: Mod kategorisi
+        type: select
+        required: true
+        options:
+          values:
+            - { name: Otobus-Modlari, label: Otobüs Modları }
+            - { name: Cekici-Modlari, label: Çekici (Tır) Modları }
+            - { name: Kamyon-Modlari, label: Kamyon (Kırkayak) Modları }
+            - { name: Dorse-Modlari, label: Dorse Modları }
+            - { name: Harita-Modlari, label: Harita Modları }
+            - { name: Aksesuar-Modlari, label: Aksesuar Modları }
+            - { name: Ses-Modlari, label: Ses Modları }
+            - { name: Hazir-Profil-Save, label: Hazır Profil / Save }
+            - { name: Diger-Modlar, label: Diğer Modlar }
+            - { name: ETS2-DLC, label: ETS2 DLC - Tanıtım/Resmî Bağlantılar }
+            - { name: ATS-DLC, label: ATS DLC - Tanıtım/Resmî Bağlantılar }
+      - name: surum
+        label: Oyun sürümü
+        type: string
+        description: "Örn: 1.62"
+      - name: aciklama
+        label: Açıklama
+        type: text
+      - name: gorsel
+        label: Mod görseli
+        type: image
+        description: Yükleme için dosya seç
+      - name: link
+        label: İndirme bağlantısı
+        type: string
+        description: Doğrulanmış ve paylaşma izni olan bağlantıyı ekle. Boş bırakılırsa buton pasif kalır.
+      - name: tarih
+        label: Yayın tarihi
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: yayinla
+        label: Sitede yayımla
+        type: boolean
