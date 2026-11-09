@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="DriveHub TR: ETS2 ve ATS modları, otobüs, çekici, kamyon, dorse, harita, aksesuar, ses, hazır profil ve DLC içerikleri için mod arşivi.">
+  <meta property="og:title" content="DriveHub TR | ETS2 & ATS Mod Arşivi">
+  <meta property="og:description" content="ETS2 ve ATS için modlar, rehberler ve mod arşivi.">
+  <meta property="og:image" content="/logo.jpg">
+  <title>DriveHub TR | ETS2 & ATS Mod Arşivi</title>
+  <link rel="icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="header" id="ust">
+    <div class="shell header-inner">
+      <a href="#ust" class="brand" aria-label="DriveHub TR Ana Sayfa">
+        <img src="logo.jpg" alt="DriveHub TR logosu">
+        <div class="brand-names"><strong>DRIVEHUB <em>TR</em></strong><small>ETS2 & ATS MOD ARŞİVİ</small></div>
+      </a>
+      <nav class="desktop-menu" aria-label="Ana menü">
+        <a href="#kategoriler">Kategoriler</a>
+        <a href="#modlar" data-game="ETS2">ETS2 Modları</a>
+        <a href="#modlar" data-game="ATS">ATS Modları</a>
+        <a href="#dlc">DLC</a>
+      </nav>
+      <div class="header-actions">
+        <a class="discord-link" href="https://discord.gg/RaZSHwVAbk" target="_blank" rel="noopener noreferrer">Discord <span aria-hidden="true">↗</span></a>
+        <button type="button" id="menuButton" class="menu-button" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="mobile-menu" aria-label="Mobil menü" hidden>
+      <a href="#kategoriler">Kategoriler</a>
+      <a href="#modlar" data-game="ETS2">ETS2 Modları</a>
+      <a href="#modlar" data-game="ATS">ATS Modları</a>
+      <a href="#dlc">Tüm DLC Bölümleri</a>
+      <a href="https://discord.gg/RaZSHwVAbk" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span> DRIVEHUB TR • SIMULATION HUB</span>
+        <h1>YOLLARIN <span class="red-text">SINIRI</span><br>YOK.</h1>
+        <p>Euro Truck Simulator 2 ve American Truck Simulator için modları tek yerde keşfet. Kategorileri gez, sürüm bilgilerini incele, paylaşım bağlantılarına ulaş.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#kategoriler">Mod kategorilerini keşfet <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#modlar">Son eklenen modlar</a>
+        </div>
+        <div class="hero-stats"><span><b>02</b><small>SİMÜLATÖR</small></span><i></i><span><b>09</b><small>MOD KATEGORİSİ</small></span><i></i><span><b>TR</b><small>TOPLULUK</small></span></div>
+      </div>
+      <div class="hero-art" aria-label="DriveHub TR amblemi">
+        <div class="art-glow"></div>
+        <img src="logo.jpg" alt="DRIVEHUB TR logosu, Volvo çekici ve Travego otobüs">
+        <span class="art-caption">DRIVEHUB TR <b>•</b> ETS2 & ATS</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Site içeriği">
+      <div class="shell ticker-inner"><span>EURO TRUCK SIMULATOR 2</span><span class="star">✦</span><span>AMERICAN TRUCK SIMULATOR</span><span class="star">✦</span><span>OTOBÜS • ÇEKİCİ • KAMYON • DORSE • HARİTA</span></div>
+    </section>
+
+    <section id="kategoriler" class="section shell">
+      <div class="section-head"><div><p class="kicker">NE ARIYORSUN?</p><h2>Mod <span>kategorileri</span></h2></div><p>İlgilendiğin mod türünü seç; sonuçlar aşağıda görüntülensin.</p></div>
+      <div id="categoryGrid" class="category-grid"></div>
+    </section>
+
+    <section id="modlar" class="section results-section shell">
+      <div class="section-head"><div><p class="kicker">DRIVEHUB TR ARŞİVİ</p><h2>Son eklenen <span>modlar</span></h2></div><p>Oyun, kategori veya mod adına göre ara.</p></div>
+      <div class="search-tools">
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="searchBox" type="search" placeholder="Mod, marka veya sürüm ara..." autocomplete="off" aria-label="Mod ara"></label>
+        <div class="game-tabs" role="group" aria-label="Oyun filtresi"><button class="active" data-filter-game="all">Tümü</button><button data-filter-game="ETS2">ETS2</button><button data-filter-game="ATS">ATS</button></div>
+      </div>
+      <div class="filter-summary"><span id="activeFilter">Tüm kategoriler</span><span id="resultCount">0 mod</span></div>
+      <div id="modGrid" class="mod-grid"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">▣</div>
+        <h3>Mod arşivimiz hazırlanıyor</h3>
+        <p>Henüz bu bölümde paylaşılmış mod bulunmuyor. Modlar eklendikçe görselleri, sürüm bilgileri ve indirme bağlantıları burada görünecek.</p>
+        <a href="https://discord.gg/RaZSHwVAbk" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discord topluluğumuza katıl ↗</a>
+      </div>
+    </section>
+
+    <section id="dlc" class="section shell dlc-section">
+      <div class="section-head"><div><p class="kicker">EK PAKET İÇERİKLERİ</p><h2>ETS2 & ATS <span>DLC</span></h2></div><p>DLC duyuruları, incelemeler ve resmi bağlantılar.</p></div>
+      <div class="dlc-grid"><button class="dlc-panel" data-dlc="ETS2-DLC"><span class="dlc-mark">ETS2</span><div><small>EURO TRUCK SIMULATOR 2</small><strong>ETS2 TÜM DLC</strong><span>İçerikleri görüntüle ↗</span></div></button><button class="dlc-panel" data-dlc="ATS-DLC"><span class="dlc-mark">ATS</span><div><small>AMERICAN TRUCK SIMULATOR</small><strong>ATS TÜM DLC</strong><span>İçerikleri görüntüle ↗</span></div></button></div>
+      <p class="legal">Bu sitede yalnızca paylaşma hakkı bulunan modlar, tanıtımlar ve yasal bağlantılar yer almalıdır. Ücretli DLC dosyaları izinsiz dağıtılmaz.</p>
+    </section>
+
+    <section class="join-wrap"><div class="shell join"><div><p class="kicker">TOPLULUĞUMUZA KATIL</p><h2>Yolculuk <span>birlikte</span> güzel.</h2><p>ETS2 & ATS dünyasındaki yeni içerikleri ve topluluk duyurularını Discord üzerinden takip et.</p></div><a class="btn btn-primary" href="https://discord.gg/RaZSHwVAbk" target="_blank" rel="noopener noreferrer">DriveHub TR Discord ↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><div class="footer-brand"><img src="favicon.jpg" alt=""/><span><strong>DRIVEHUB TR</strong><small>ETS2 & ATS MOD ARŞİVİ</small></span></div><p>© <span id="year"></span> DriveHub TR. Bağımsız simülasyon topluluğu.</p><a href="#ust">Yukarı çık ↑</a></div></footer>
+  <script src="mods.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
